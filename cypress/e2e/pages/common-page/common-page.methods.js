@@ -56,4 +56,9 @@ static generateRandomString(length = 10) {
 
     return result;
 }
+
+//Método creado en vídeo 74 - prueba inicio de sesión válido
+static verifySignedUser(username){
+  CommonPageElements.signedUser.should('have.text', `Welcome ${username}`)
+}
 }

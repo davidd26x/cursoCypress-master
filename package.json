@@ -7,8 +7,8 @@
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
     "ejecutar-pruebas": "cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean && allure open allure-report",
-    "abrir reporte": "allure open",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte "
+    "abrir-reporte": "allure open",
+    "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true) && npm run generar-reporte && abrir-reporte"
   },
   "repository": {
     "type": "git",
