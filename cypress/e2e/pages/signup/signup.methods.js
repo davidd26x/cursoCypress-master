@@ -3,11 +3,11 @@ import { SignupElements } from "./signup.elements";
 
 export class SignupMethods {
   static insertarUsername(username) {
-    SignupElements.textBoxes.username.invoke("val", username);
+    SignupElements.textBoxes.username.type(username);
   }
 
   static insertarPassword(password) {
-    SignupElements.textBoxes.password.invoke("val", password);
+    SignupElements.textBoxes.password.type(password);
   }
 
   static clickSignupButton() {
@@ -25,5 +25,10 @@ export class SignupMethods {
   //Nuevo metodo para mostrar el mensaje exitoso de inicio de sesión
   static verifySignupSuccessfulMessageIsDisplayed(){
     CommonPageMethods.verifyAlert("Sign up successful.")
+  }
+
+  //Nuevo método para mostrar el mensaje de error de inicio de sesión fallido
+  static verifyThatThisUserAlreadyExistMessageDisplayed(){
+    CommonPageMethods.verifyAlert("This user already exists.")
   }
 }
