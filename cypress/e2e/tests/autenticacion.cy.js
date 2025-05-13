@@ -5,6 +5,7 @@ import { LoginMethods } from '../pages/login/login.methods'
 import { LoginData } from '../pages/login/login.data';
 
 describe(CommonPageData.testSuites.registroYAutenticacion, () => {
+    //Inicio de sesión inválido
     it('Inicio de sesión inválido', () => {
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio')
