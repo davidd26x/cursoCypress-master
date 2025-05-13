@@ -1,5 +1,6 @@
 import { CommonPageMethods } from "../common-page/common-page.methods";
 import { LoginElements } from "./login.elements";
+import { Logger } from '../../util/logger';
 
 //Se usa el invoke en vez del type para evitar el delay de escritura y que se completen los campos correctamente
 export class LoginMethods{

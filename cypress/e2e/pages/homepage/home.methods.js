@@ -17,4 +17,9 @@ export class HomeMethods{
     static clickOnProductLink(productName){
         HomeElements.product(productName).click()
     }
+
+    //Método que verifique que un producto se esté mostrando. Vid-76.
+    static verifyProductIsDisplayed(productName){
+        HomeElements.product(productName).should('be.visible')
+    }
 }
