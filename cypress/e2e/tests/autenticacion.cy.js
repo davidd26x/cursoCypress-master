@@ -25,7 +25,7 @@ describe(CommonPageData.testSuites.registroYAutenticacion, () => {
         LoginMethods.clickLoginButton();
         //Verificacion de paso 4
         Logger.verification('Verificar que se redirige al usuario a la página de inicio')
-        CommonPageMethods.verifySignedUser(LoginData.validCredentials.username)
+        LoginMethods.verifyWrongPasswordMessage();
         
     })
  }) 
