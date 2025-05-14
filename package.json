@@ -27,6 +27,7 @@
     "rimraf": "^6.0.1"
   },
   "dependencies": {
-    "@shelex/cypress-allure-plugin": "^2.41.1"
+    "@shelex/cypress-allure-plugin": "^2.41.1",
+    "allure": "^3.0.0-beta.12"
   }
 }

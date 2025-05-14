@@ -28,6 +28,7 @@ export class LoginMethods{
         this.clickLoginButton()
     }
 
+    //Método para verificar un mensaje de contraseña incorrecta.
     static verifyWrongPasswordMessage(){
         CommonPageMethods.verifyAlert('Wrong password.')
         
