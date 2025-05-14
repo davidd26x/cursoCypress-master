@@ -8,7 +8,7 @@
     "ejecutar-pruebas": "cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean && allure open allure-report",
     "abrir-reporte": "allure open",
-    "test": "npm run limpiar-reporte && (npm run ejecutar-pruebas || true) && npm run generar-reporte && abrir-reporte"
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "rimraf": "^6.0.1"
   },
   "dependencies": {
-    "@shelex/cypress-allure-plugin": "^2.41.1",
-    "allure": "^3.0.0-beta.12"
+    "@shelex/cypress-allure-plugin": "^2.41.1"
   }
 }
