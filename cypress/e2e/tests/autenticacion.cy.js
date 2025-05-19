@@ -4,9 +4,9 @@ import { Logger } from '../util/logger';
 import { LoginMethods } from '../pages/login/login.methods'
 import { LoginData } from '../pages/login/login.data';
 
-xdescribe(CommonPageData.testSuites.registroYAutenticacion, () => {
+describe(CommonPageData.testSuites.registroYAutenticacion, () => {
     //Inicio de sesión inválido
-    xit('Inicio de sesión válido', () => {
+    it('Inicio de sesión válido', () => {
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio')
         CommonPageMethods.navigateToDemoBlaze();
@@ -29,7 +29,7 @@ xdescribe(CommonPageData.testSuites.registroYAutenticacion, () => {
         
     })
 
-    xit('Inicio de sesión inválido', () => {
+    it('Inicio de sesión inválido', () => {
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio')
         CommonPageMethods.navigateToDemoBlaze();

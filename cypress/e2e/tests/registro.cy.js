@@ -12,7 +12,7 @@ const password = CommonPageMethods.generateRandomString(7);
 //Nuevas variables para usuarios inválidos
 const existingUser = LoginData.validCredentials.username;
 
-xdescribe(CommonPageData.testSuites.registroYAutenticacion, () => {
+describe(CommonPageData.testSuites.registroYAutenticacion, () => {
   it("Registro de usuario válido", () => {
     //Numero de paso
     Logger.stepNumber(1);
@@ -39,7 +39,7 @@ xdescribe(CommonPageData.testSuites.registroYAutenticacion, () => {
 
 
   //Registro de usuario inválido
-  xit("Registro de usuario inválido", () => {
+  it("Registro de usuario inválido", () => {
     //Numero de paso
     Logger.stepNumber(1);
     Logger.step("Navegar a la página de inicio");
