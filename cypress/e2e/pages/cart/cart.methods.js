@@ -22,9 +22,11 @@ export class CartMethods {
   }
 
   static deleteProducts(){
+    //Se usa mejor el cy.intercept en vez del wait porque es de malas prácticas
+    cy.intercept('POST', 'https://api.demoblaze.com/deleteitem').as('deleteItem')
     cy.get('a[onclick*="deleteItem"]').each(link=> {
       link.click();
-      cy.wait(1000)
+      cy.wait('@deleteItem')
     })
   }
 
