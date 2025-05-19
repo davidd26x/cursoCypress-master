@@ -64,4 +64,13 @@ static generateRandomString(length = 10) {
 static verifySignedUser(username){
   CommonPageElements.signedUser.should('have.text', `Welcome ${username}`)
 }
+
+//Método para hacer logout
+static logout(){
+  cy.get('body').then($body=> {
+    if($body.find('#logout2').lenght > 0){
+      CommonPageElements.topMenu.logOut.click();
+    }
+  })
+}
 }

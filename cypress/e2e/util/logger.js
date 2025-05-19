@@ -33,4 +33,11 @@ export class Logger{
         cy.log(texto)
         cy.allure().step(texto)
     }
+
+    //Nuevo método para logout
+    static postCondition(description){
+        const texto = `PostCondition: ${description}`;
+        cy.log(texto)
+        cy.allure().step(texto)
+    }
 }

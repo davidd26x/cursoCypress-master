@@ -25,8 +25,11 @@ describe(CommonPageData.testSuites.registroYAutenticacion, () => {
         LoginMethods.clickLoginButton();
         //Verificacion de paso 4
         Logger.verification('Verificar que se redirige al usuario a la página de inicio')
-        LoginMethods.verifyWrongPasswordMessage();
-        
+        CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
+
+        //Nuevos cambios (Vid. 82 Haciendo logout)
+        Logger.postCondition('Log out')
+        CommonPageMethods.logout();
     })
 
     it('Inicio de sesión inválido', () => {
