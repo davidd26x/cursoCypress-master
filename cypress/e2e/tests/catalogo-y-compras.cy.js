@@ -17,6 +17,7 @@ const user = LoginData.validCredentials;
 const product = 'ASUS Full HD'
 
 describe(CommonPageData.testSuites.catalogoYCompras, () => {
+    //Caso de Prueba Navegar por categorías
     it('Navegación por categorías', () => {
 
         //Paso 1
@@ -45,6 +46,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
     })
 
 
+    //Caso de prueba Agregar producto al carrito
     it('Agregar producto al carrito', () => {
 
         //Paso 1
@@ -83,6 +85,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
 
     })
 
+    //Caso de prueba realizar una compra
     it('Realizar una compra', () => {
 
         //Paso 1

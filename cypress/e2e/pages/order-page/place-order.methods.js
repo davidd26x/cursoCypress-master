@@ -26,7 +26,7 @@ export class PlaceOrderMethods {
     PlaceOrderElements.textboxes.year.invoke("val", year); 
   }
 
-  //Botón que completa todos
+  //Botón que completa todos los campos
   static insertOrderInformation(data){
     this.insertName(data.name)
     this.insertCountry(data.country)
