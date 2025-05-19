@@ -4,8 +4,10 @@ import { CommonPageElements } from "./common-page.elements";
 export class CommonPageMethods {
   //Metodos que naveguen a la página
   static navigateToDemoBlaze() {
-    cy.clearCookies();
+    cy.clearAllCookies();
+    cy.clearLocalStorage();
     cy.visit(CommonPageData.url);
+    CommonPageMethods.clickOnHomeOption();
   }
 
   static clickOnHomeOption() {
