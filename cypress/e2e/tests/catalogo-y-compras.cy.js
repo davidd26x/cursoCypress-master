@@ -43,6 +43,9 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
         Logger.verification('Verificar que se muestra la lista de productos correspondiente a la categoría seleccionada')
         HomeMethods.verifyProductIsDisplayed('Apple monitor 24')
         HomeMethods.verifyProductIsDisplayed('ASUS Full HD')
+
+        Logger.postCondition('Log out')
+        CommonPageMethods.logout();
     })
 
 
@@ -82,6 +85,17 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
         Logger.stepNumber(6)
         Logger.step('Hacer clic en el botón Add to cart')
         ProductDetailsMethods.clickOnAddToCartButton();
+
+        //Paso 7
+        Logger.stepNumber(7)
+        Logger.verification('Verificar que se muestra un mensaje de confirmación y el producto se agrega correctamente')
+        ProductDetailsMethods.verifyProductAddedMessage();
+        CommonPageMethods.clickOnCartOption();
+        CartMethods.verifyProductAdded(product);
+
+        //Post condicion para deslogearse
+        Logger.postCondition('logout')
+        CommonPageMethods.logout();
 
     })
 

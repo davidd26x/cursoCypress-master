@@ -70,7 +70,7 @@ static verifySignedUser(username){
 //Método para hacer logout
 static logout(){
   cy.get('body').then($body=> {
-    if($body.find('#logout2').lenght > 0){
+    if($body.find('#logout2[style="display: block;"]').length > 0){
       CommonPageElements.topMenu.logOut.click();
     }
   })
