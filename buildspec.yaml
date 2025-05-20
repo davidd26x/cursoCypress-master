@@ -3,31 +3,11 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20
-    commands:
-      - echo "Instalando dependencias del sistema necesarias para Cypress..."
-      - yum install -y \
-          atk \
-          cups-libs \
-          gtk3 \
-          libXcomposite \
-          libXcursor \
-          libXdamage \
-          libXext \
-          libXi \
-          libXtst \
-          pango \
-          xorg-x11-server-Xvfb \
-          libXScrnSaver \
-          libXrandr \
-          alsa-lib \
-          ipa-gothic-fonts \
-          atk-bridge-2.0
+      nodejs: latest
   pre_build:
     commands:
-      - echo "Instalando dependencias del proyecto (npm install)..."
+      - echo "Instalando dependencias..."
       - npm install
   build:
     commands:
-      - echo "Ejecutando pruebas Cypress (headed)..."
       - npm run test
