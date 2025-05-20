@@ -19,9 +19,12 @@ export class CommonPageElements{
             },
             get signUp(){
                 return cy.contains('a', 'Sign up')
+<<<<<<< HEAD
             },
             get logOut(){
                 return cy.get('#logout2')
+=======
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
             }
         }
     }

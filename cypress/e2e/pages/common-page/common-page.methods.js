@@ -4,10 +4,15 @@ import { CommonPageElements } from "./common-page.elements";
 export class CommonPageMethods {
   //Metodos que naveguen a la página
   static navigateToDemoBlaze() {
+<<<<<<< HEAD
     cy.clearAllCookies();
     cy.clearLocalStorage();
     cy.visit(CommonPageData.url);
     CommonPageMethods.clickOnHomeOption();
+=======
+    cy.clearCookies();
+    cy.visit(CommonPageData.url);
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
   }
 
   static clickOnHomeOption() {
@@ -28,9 +33,12 @@ export class CommonPageMethods {
   static clickOnCartOption() {
     //Al hacer click en la seccion Cart del Menú de arriba
     CommonPageElements.topMenu.cart.click();
+<<<<<<< HEAD
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false
     })
+=======
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
   }
 
   static clickOnLogInOption() {
@@ -66,6 +74,7 @@ static generateRandomString(length = 10) {
 static verifySignedUser(username){
   CommonPageElements.signedUser.should('have.text', `Welcome ${username}`)
 }
+<<<<<<< HEAD
 
 //Método para hacer logout
 static logout(){
@@ -75,4 +84,6 @@ static logout(){
     }
   })
 }
+=======
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
 }

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { CommonPageMethods } from "../common-page/common-page.methods";
 import { LoginMethods } from "../login/login.methods";
+=======
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
 import { CartElements } from "./cart.elements";
 
 export class CartMethods {
@@ -8,6 +11,7 @@ export class CartMethods {
   }
 
   //Verificar producto añadido
+<<<<<<< HEAD
   static verifyProductAdded(productName){
     CartElements.links.delete(productName).should('be.visible')
   }
@@ -54,4 +58,9 @@ export class CartMethods {
 
   }
 
+=======
+  static verifyProductAdded(){
+    CartElements.links.delete(productName).should('be.visible')
+  }
+>>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
 }
