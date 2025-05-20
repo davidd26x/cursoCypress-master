@@ -5,18 +5,12 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      # Instalar dependencias necesarias
-      - echo "Instalando dependencias del sistema..."
-      - apt-get update && apt-get install -y openjdk-11-jre
-      - echo "Instalando dependencias del proyecto..."
       - npm install
 
   build:
     commands:
-      - echo "Ejecutando pruebas Cypress..."
       - npm run test
 
 artifacts:
   files:
     - '**/*'
-
