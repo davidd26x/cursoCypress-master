@@ -10,4 +10,4 @@ phases:
       - npm install
   build:
     commands:
-      - npm run test2
+      - npm run test
