@@ -8,7 +8,8 @@
     "ejecutar-pruebas": "cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean && allure open allure-report",
     "abrir-reporte": "allure open",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte"
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte",
+    "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/tests && npm run generar-reporte"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "allure-commandline": "^2.34.0",
     "cypress": "^14.3.3",
+    "cypress-parallel": "^0.15.0",
+    "parallel": "^1.3.1",
     "rimraf": "^6.0.1"
   },
   "dependencies": {
