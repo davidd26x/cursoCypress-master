@@ -99,7 +99,7 @@ describe(CommonPageData.testSuites.catalogoYCompras, () => {
 
     })
 
-    //Caso de prueba realizar una compra
+    //Caso de prueba realizar una compra en cypressMaster-main
     it('Realizar una compra', () => {
 
         //Paso 1
