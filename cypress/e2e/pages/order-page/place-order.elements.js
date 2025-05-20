@@ -27,11 +27,7 @@ export class PlaceOrderElements {
     return {
         //Botones en ventana de Place Order
         get purchase(){
-<<<<<<< HEAD
             return cy.contains('button', 'Purchase')
-=======
-            cy.contains('button', 'Purchase')
->>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
         },
         get close(){
             return cy.get('div[id="orderModal"] button').eq(1)
