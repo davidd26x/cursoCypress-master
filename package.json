@@ -5,18 +5,14 @@
   "main": "index.js",
   "scripts": {
     "limpiar-reporte": "rimraf ./allure-report && rimraf ./allure-results",
-<<<<<<< HEAD
+
     "ejecutar-pruebas": "cypress run --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean && allure open allure-report",
     "abrir-reporte": "allure open",
     "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte",
     "cy:parallel": "npm run limpiar-reporte && cypress-parallel -s ejecutar-pruebas -t 2 -d ./cypress/e2e/tests && npm run generar-reporte"
-=======
-    "ejecutar-pruebas": "cypress run --headed --env allure=true",
-    "generar-reporte": "allure generate allure-results -o allure-report --clean && allure open allure-report",
-    "abrir-reporte": "allure open",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte"
->>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
+
+
   },
   "repository": {
     "type": "git",
@@ -32,11 +28,10 @@
   "devDependencies": {
     "allure-commandline": "^2.34.0",
     "cypress": "^14.3.3",
-<<<<<<< HEAD
+
     "cypress-parallel": "^0.15.0",
     "parallel": "^1.3.1",
-=======
->>>>>>> 7992e27311f3fc70195a54f919bc6b501ba434a5
+
     "rimraf": "^6.0.1"
   },
   "dependencies": {
