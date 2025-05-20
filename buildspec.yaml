@@ -1,11 +1,16 @@
 version: 0.2
+
 phases:
   install:
-      runtime-versions:
-        nodejs:latest
-  pre_build:
+    runtime-versions:
+      nodejs: 18
     commands:
       - npm install
+
   build:
     commands:
-      - npm run cy:parallel
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
