@@ -13,4 +13,4 @@ phases:
   post_build:
     commands:
       - aws s3 sync allure-report s3://reporte-de-pruebas-jose/
-      - aws s3 cp --recursive --act public-read s3://reporte-de-pruebas-jose/ s3://reporte-de-pruebas-jose/ --metadata-directive REPLACE
+      - aws s3 cp --recursive --acl public-read s3://reporte-de-pruebas-jose/ s3://reporte-de-pruebas-jose/ --metadata-directive REPLACE
