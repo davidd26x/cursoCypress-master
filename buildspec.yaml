@@ -3,11 +3,36 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 20
+    commands:
+      - echo "Instalando dependencias del sistema necesarias para Cypress..."
+      - yum -y update
+      - yum -y install \
+          gtk3 \
+          libXScrnSaver \
+          alsa-lib \
+          atk \
+          cups-libs \
+          libdrm \
+          libxkbcommon \
+          libXcomposite \
+          libXcursor \
+          libXdamage \
+          libXext \
+          libXfixes \
+          libXi \
+          libXrandr \
+          libXtst \
+          pango \
+          xorg-x11-server-Xvfb \
+          at-spi2-atk  # <- esta contiene libatk-bridge-2.0.so.0
+
   pre_build:
     commands:
-      - echo "Instalando dependencias..."
+      - echo "Instalando dependencias de Node.js..."
       - npm install
+
   build:
     commands:
+      - echo "Ejecutando pruebas..."
       - npm run test
