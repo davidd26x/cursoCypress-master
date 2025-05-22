@@ -3,17 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20
-    commands:
-      - echo "Instalando dependencias del sistema necesarias para Cypress..."
-      - npm install
-
+      nodejs: latest
   pre_build:
     commands:
-      - echo "Instalando dependencias de Node.js..."
       - npm install
-
   build:
     commands:
-      - echo "Ejecutando pruebas..."
       - npm run cy:parallel
