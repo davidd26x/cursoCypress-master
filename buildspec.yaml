@@ -6,26 +6,7 @@ phases:
       nodejs: 20
     commands:
       - echo "Instalando dependencias del sistema necesarias para Cypress..."
-      - yum -y update
-      - yum -y install \
-          gtk3 \
-          libXScrnSaver \
-          alsa-lib \
-          atk \
-          cups-libs \
-          libdrm \
-          libxkbcommon \
-          libXcomposite \
-          libXcursor \
-          libXdamage \
-          libXext \
-          libXfixes \
-          libXi \
-          libXrandr \
-          libXtst \
-          pango \
-          xorg-x11-server-Xvfb \
-          at-spi2-atk  # <- esta contiene libatk-bridge-2.0.so.0
+      - npm install
 
   pre_build:
     commands:
@@ -35,4 +16,4 @@ phases:
   build:
     commands:
       - echo "Ejecutando pruebas..."
-      - npm run test
+      - npm run cy:parallel
